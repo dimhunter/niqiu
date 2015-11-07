@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.shen.mapper.BlogMapper">
+
+    <insert id="addCategory" parameterType="com.shen.model.Category">
+        insert into _category(name,description,part_id) values (#{name},#{description},#{part_id})
+    </insert>
+
+    <select id="getParts" resultType="com.shen.model.Part">
+        select id,name,description from _part order by id;
+    </select>
+
+    <select id="getCatogorys" resultType="com.shen.model.Category" >
+        select id,name,description,part_id from _category order by id
+    </select>
+
+    <insert id="addBlog" parameterType="com.shen.model.Blog" >
+        insert into _blog(name,content,category_id,create_time) values (#{name},#{content},#{category_id},now())
+    </insert>
+
+    <select id="getBlogs" resultType="com.shen.model.Blog" >
+        select id,name,content,category_id,create_time from _blog order by create_time desc
+    </select>
+
+    <select id="getBlog" resultType="com.shen.model.Blog" >
+        select id,name,content,category_id,create_time from _blog where id = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,55 @@
+<taglib version="2.0" 
+ xmlns="http://java.sun.com/xml/ns/j2ee" 
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+  
+  	<tlib-version>1.0</tlib-version>
+	<short-name>date</short-name>
+	
+	<function>
+    	<name>contains</name>
+    	<function-class>monad.web.common.taglib.CommonTag</function-class>
+    	<function-signature>java.lang.Boolean contains(java.util.Collection,java.lang.Object)</function-signature>
+  	</function>
+  	
+  	<function>
+    	<name>exist</name>
+    	<function-class>monad.web.common.taglib.CommonTag</function-class>
+    	<function-signature>java.lang.Boolean exist(java.util.List,java.lang.String)</function-signature>
+  	</function>
+  	
+  	<function>
+    	<name>encode</name>
+    	<function-class>monad.web.common.taglib.CommonTag</function-class>
+    	<function-signature>java.lang.String encode(java.lang.String,java.lang.String)</function-signature>
+  	</function>
+  	
+  	<function>
+    	<name>blank</name>
+    	<function-class>monad.web.common.taglib.CommonTag</function-class>
+    	<function-signature>java.lang.Boolean blank(java.lang.String)</function-signature>
+  	</function>
+  	
+  	<function>
+    	<name>parseDate</name>
+    	<function-class>monad.web.common.taglib.CommonTag</function-class>
+    	<function-signature>java.lang.String parseDate(java.lang.String)</function-signature>
+  	</function>
+	
+	<!-- 下边是自定义的标签库，和自定义的函数库是不同的。
+	<tag>
+		<name>contains</name>
+		<tagclass>monad.web.common.taglib.CommonTag</tagclass>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>		
+		<attribute>
+			<name>pattern</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+	 -->
+	
+</taglib>
