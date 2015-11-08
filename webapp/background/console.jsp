@@ -14,7 +14,7 @@
             <a href="${Context}toaddcategory.do" target="bk_iframe">添加类别</a>
             <br/>
             <br/>
-            <a href="${Context}toaddblog.do" target="bk_iframe">上传照片</a>
+            <a href="upload.jsp" target="bk_iframe">上传文件</a>
             <br/>
             <br/>
             <a href="${Context}toaddblog.do" target="bk_iframe">添加文章</a>

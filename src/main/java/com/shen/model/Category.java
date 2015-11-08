@@ -7,7 +7,7 @@ public class Category {
 
     private int id;
     private String name;
-    //descºÍmysql¹Ø¼ü×Ö³åÍ»£¬ËùÒÔÓÃÈ«³Æ¡£
+    //descå’Œmysqlå…³é”®å­—å†²çªï¼Œæ‰€ä»¥ç”¨å…¨ç§°ã€‚
     private String description;
     private int part_id;
 
