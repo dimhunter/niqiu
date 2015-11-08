@@ -17,7 +17,7 @@ public class NiqiuApp {
 		String productionMode = System.getProperty(Constant.PRODUCTION_MODE, "true");
 		System.out.println(NiqiuApp.class.getResource("/") + "../../webapp");
     	int port = Integer.valueOf(System.getProperty(Constant.SERVER_PORT, "7777"));
-    	String serverHome = "false".equals(productionMode) ? "D:\\svn\\shen-project\\niqiu\\trunk\\webapp" : System.getProperty("server.home") + File.separator + "app";
+    	String serverHome = "false".equals(productionMode) ? "D:\\git-repository\\niqiu\\webapp" : System.getProperty("server.home") + File.separator + "app";
 	    Server jettyServer = null;
 	    try{
 	    	jettyServer = WebServer.createServer(serverHome + File.separator + "WEB-INF" + File.separator +"web.xml",serverHome, port, "/");
