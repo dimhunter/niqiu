@@ -3,6 +3,7 @@ package com.shen.mapper;
 import com.shen.model.Blog;
 import com.shen.model.Category;
 import com.shen.model.Part;
+import com.shen.model.UploadFile;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -23,4 +24,8 @@ public interface BlogMapper {
     List<Blog> getBlogs();
 
     Blog getBlog(@Param("id") int id);
+
+    void saveFile(UploadFile uf);
+
+    List<Blog> getTopBlogs();
 }

@@ -12,7 +12,7 @@
 <header>
   <div id="logo"><a href="/"></a></div>
   <nav class="topnav" id="topnav">
-    <a href="index.jsp"><span>首页</span><span class="en">Protal</span></a>
+    <a href="${Context}index.do"><span>首页</span><span class="en">Protal</span></a>
     <a href="${Context}pictures.do?part_id=2"><span>瞬间永恒</span><span class="en">Gustbook</span></a>
     <a href="${Context}mylife.do?part_id=3"><span>慢生活</span><span class="en">Life</span></a>
     <a href="moodlist.jsp"><span>学无止境</span><span class="en">Doing</span></a>

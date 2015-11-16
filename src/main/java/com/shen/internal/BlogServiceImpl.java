@@ -43,4 +43,9 @@ public class BlogServiceImpl implements BlogService {
     public Blog getBlog(int id) {
         return blogMapper.getBlog(id);
     }
+
+    @Override
+    public List<Blog> getTopBlogs() {
+        return blogMapper.getTopBlogs();
+    }
 }

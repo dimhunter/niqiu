@@ -46,6 +46,16 @@ public class IndexController {
 		return mv;
 	}
 
+	@RequestMapping(value="/index",method=RequestMethod.GET)
+	public ModelAndView index(){
+		ModelAndView mv = new ModelAndView("index");
+		List<Blog> topBlogs = blogService.getTopBlogs();
+		mv.addObject("TopBlogs",topBlogs);
+		return mv;
+	}
+
+
+
 	@RequestMapping(value="/pictures",method=RequestMethod.GET)
 	public ModelAndView pictures(HttpServletRequest request){
 		ModelAndView mv = new ModelAndView("pictures");

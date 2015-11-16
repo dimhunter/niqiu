@@ -22,4 +22,6 @@ public interface BlogService {
     List<Blog> getBlogs();
 
     Blog getBlog(int id);
+
+    List<Blog> getTopBlogs();
 }

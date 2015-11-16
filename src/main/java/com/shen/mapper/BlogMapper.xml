@@ -20,8 +20,16 @@
         insert into _blog(name,content,category_id,create_time) values (#{name},#{content},#{category_id},now())
     </insert>
 
+    <insert id="saveFile" parameterType="com.shen.model.UploadFile" >
+        insert into _file(name,file_name,type,upload_time) values (#{name},#{file_name},#{type},now())
+    </insert>
+
     <select id="getBlogs" resultType="com.shen.model.Blog" >
         select id,name,content,category_id,create_time from _blog order by create_time desc
+    </select>
+
+    <select id="getTopBlogs" resultType="com.shen.model.Blog" >
+        select id,name,content,category_id,create_time from _blog order by create_time desc limit 6
     </select>
 
     <select id="getBlog" resultType="com.shen.model.Blog" >

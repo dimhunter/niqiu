@@ -1,7 +1,9 @@
 package com.shen.web.controller;
 
+import com.shen.model.UploadFile;
 import com.shen.service.FileService;
 import com.shen.utils.SysConfigPropertyUtil;
+import org.apache.tools.ant.util.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,17 +45,26 @@ public class FileController {
 				MultipartFile file = multiRequest.getFile(iter.next());
 				if(file != null){
 					//取得当前上传文件的文件名称
-					String myFileName = file.getOriginalFilename();
+					String fileName = file.getOriginalFilename();
 //					file.get
 					//如果名称不为“”,说明该文件存在，否则说明该文件不存在
-					if(myFileName.trim() !=""){
-						System.out.println(myFileName);
-						String houzhui = myFileName.substring(myFileName.lastIndexOf(".")+1);
+					if(fileName.trim() !=""){
+						System.out.println(fileName);
+						//后缀
+						String type = fileName.substring(fileName.lastIndexOf(".")+1);
 						//重命名上传后的文件名
-						String fileName = "demoUpload" + myFileName;
+						String myFileName = "demoUpload" + fileName;
 						//定义上传路径
 //						String path = "f:/" + fileName;
-						String path = SysConfigPropertyUtil.getInstance().getPropertyValue("filepath") + fileName;
+						String path = SysConfigPropertyUtil.getInstance().getPropertyValue("filepath") + myFileName;
+
+						UploadFile uf = new UploadFile();
+						uf.setFile_name(fileName);
+						uf.setName(myFileName);
+						uf.setType(type);
+
+						fileService.saveFile(uf);
+
 						File localFile = new File(path);
 						file.transferTo(localFile);
 					}
