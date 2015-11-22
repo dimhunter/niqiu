@@ -22,7 +22,7 @@
    <p class="dateview"><span>发布时间：<fmt:formatDate pattern="yyyy-MM-dd" value="${blg.create_time}" /> </span><span>作者：申哥</span><span>分类：[<a href="/news/life/">${catmap[blg.category_id]}</a>]</span></p>
     <figure><img src="images/001.png"></figure>
     <ul class="nlist">
-      <p>${fn:substring(blg.content,0,85)}...</p>
+      <p>${fn:substring(blg.content,0,75)}...</p>
       <a title="/" href="${Context}showblog.do?b_id=${blg.id}" target="_blank" class="readmore">阅读全文>></a>
     </ul>
     <div class="line"></div>

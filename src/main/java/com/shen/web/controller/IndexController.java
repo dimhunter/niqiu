@@ -51,6 +51,9 @@ public class IndexController {
 		ModelAndView mv = new ModelAndView("index");
 		List<Blog> topBlogs = blogService.getTopBlogs();
 		mv.addObject("TopBlogs",topBlogs);
+
+		List<Blog> blogs = blogService.getBlogs();
+		mv.addObject("Blogs",blogs);
 		return mv;
 	}
 

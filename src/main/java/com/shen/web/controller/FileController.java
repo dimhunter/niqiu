@@ -1,8 +1,8 @@
 package com.shen.web.controller;
 
+import com.shen.common.utils.PropertyFileUtils;
 import com.shen.model.UploadFile;
 import com.shen.service.FileService;
-import com.shen.utils.SysConfigPropertyUtil;
 import org.apache.tools.ant.util.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -56,7 +56,7 @@ public class FileController {
 						String myFileName = "demoUpload" + fileName;
 						//定义上传路径
 //						String path = "f:/" + fileName;
-						String path = SysConfigPropertyUtil.getInstance().getPropertyValue("filepath") + myFileName;
+						String path = PropertyFileUtils.getInstance().getPropertyValue("filepath") + myFileName;
 
 						UploadFile uf = new UploadFile();
 						uf.setFile_name(fileName);
