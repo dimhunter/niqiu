@@ -23,5 +23,9 @@ public interface BlogService {
 
     Blog getBlog(int id);
 
+    /**
+     * 最新文章，按时间倒序。
+     * @return
+     */
     List<Blog> getTopBlogs();
 }

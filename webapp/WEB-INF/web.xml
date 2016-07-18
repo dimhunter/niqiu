@@ -100,7 +100,7 @@
 	</servlet-mapping>
 	<!-- dwr配置结束-->
 	
-	<!-- 
+	<!--
 	<jsp-config>
 		<taglib>
 			<taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
